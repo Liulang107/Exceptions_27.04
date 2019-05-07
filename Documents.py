@@ -10,7 +10,7 @@ def print_documents_holders(document_list):
   try:
     for document in document_list:
       print(f'{document["name"]}')
-  except Exception as e:
+  except KeyError as e:
     print(f'Ошибка "{e.__class__.__name__}": У документа № {document["number"]} не указан владелец')
 
 
